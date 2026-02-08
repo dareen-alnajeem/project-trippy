@@ -1,0 +1,14 @@
+.about {
+    margin: 64px 70px;
+
+    h2 {
+            padding-bottom: 1rem;
+            font-size: 2em;
+            text-align: start;
+    }
+
+    p {
+        padding-bottom: 2rem;
+         text-align: start;
+    }
+}

@@ -1,0 +1,120 @@
+.destinations-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 72px;
+}
+
+.destinations-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.destinations-container .text {
+    width: 49%;
+
+}
+
+.destinations-container .images {
+    width: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.destinations-container .images img {
+    width: 49%;
+    height: 350px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.destinations-container .images img:last-child {
+    transform: translateY(-24px);
+}
+
+/* ========== Tablet & Mobile ========== */
+@media (max-width: 992px) {
+
+    .destinations-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .destinations-container.reverse {
+        flex-direction: column;
+    }
+
+    .destinations-container .images {
+        order: 1;
+        width: 100%;
+    }
+
+    .destinations-container .text {
+        order: 2;
+        width: 100%;
+
+    }
+
+    .destinations-container .images img {
+        height: 300px;
+    }
+
+    .destinations-container .text h2 {
+        font-size: 16px;
+    }
+
+    .destinations-container .text p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+/* ========== Mobile Small ========== */
+@media (max-width: 600px) {
+
+    .destinations-container {
+        margin-top: 48px;
+    }
+
+    .destinations-container .text h2 {
+        font-size: 20px;
+        text-align: start;
+    }
+
+    .destinations-container .text p {
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: start;
+    }
+
+    .destinations-container .images {
+        gap: 12px;
+    }
+
+    .destinations-container .images img {
+        width: 49%;
+        height: 220px;
+    }
+
+    .destinations-container .images img:last-child {
+        transform: none;
+    }
+
+    .destinations-container .text {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .destinations-container .text h2 {
+        font-size: 18px;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+
+    .destinations-container .text p {
+        font-size: 14px;
+        line-height: 1.8;
+        color: #555;
+        width: 100%;
+    }
+}
