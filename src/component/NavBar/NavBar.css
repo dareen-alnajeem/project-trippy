@@ -1,155 +1,156 @@
 /* ================= NAVIGATION ================= */
 nav {
-  background-color: #fff;
-  border-radius: 13px;
-  box-shadow: 0 15px 5px 0 rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  padding: 0 30px;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
-  z-index: 9999;
+    background-color: #fff;
+    border-radius: 13px;
+    box-shadow: 0 15px 5px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 30px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    z-index: 9999;
 }
 
 nav .logo {
-  color: #222;
-  cursor: pointer;
-  font-size: 2rem;
+    color: #222;
+    cursor: pointer;
+    font-size: 2rem;
 }
 
 nav .nav-menu {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 nav .nav-menu ul {
-  display: flex;
-  gap: 10px;
-  list-style: none;
-  align-items: center;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
 }
 
 .nav-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0.7rem 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #222;
-  border-radius: 4px;
-  transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #222;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-link.active,
 .nav-link:hover {
-  background-color: #01959a;
-  color: #fff;
+    background-color: #01959a;
+    color: #fff;
 }
 
 .signup-btn {
-  display: inline-block;
-  padding: 0.7rem 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #222;
-  border-radius: 8px;
-  background-color: #01959a;
-  transition: background 0.2s ease;
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #f8f6f6;
+    border-radius: 8px;
+    background-color: #141414;
+    transition: background 0.2s ease;
 }
 
 .signup-btn:hover {
-  background-color: #016868;
+    background-color: #016868;
 }
 
 .signup-btn.active {
-  background-color: #01959a;
-  color: #fff;
+    background-color: #01959a;
+    color: #fff;
 }
 
 .hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #222;
-  border-radius: 3px;
+    width: 25px;
+    height: 3px;
+    background: #222;
+    border-radius: 3px;
 }
 
 /* ================= MEDIA QUERIES ================= */
 @media (max-width: 992px) {
-  /* أخفي القائمة الرئيسية */
-  nav .nav-menu ul {
-    display: none;
-  }
 
-  nav .nav-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 80%;
-    max-width: 320px;
-    background: #fff;
-    flex-direction: column;
-    padding: 100px 25px 40px;
-    transform: translateX(100%);
-    transition: transform 0.35s ease;
-    z-index: 10000;
-  }
+    /* أخفي القائمة الرئيسية */
+    nav .nav-menu ul {
+        display: none;
+    }
 
-  nav .nav-menu.open {
-    transform: translateX(0);
-  }
+    nav .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 80%;
+        max-width: 320px;
+        background: #fff;
+        flex-direction: column;
+        padding: 100px 25px 40px;
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+        z-index: 10000;
+    }
 
-  /* روابط القائمة */
-  nav .nav-menu ul {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 100%;
-  }
+    nav .nav-menu.open {
+        transform: translateX(0);
+    }
 
-  nav .nav-menu ul li {
-    width: 100%;
-  }
+    /* روابط القائمة */
+    nav .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+    }
 
-  nav .nav-menu .nav-link {
-    width: 100%;
-    font-size: 1.1rem;
-  }
+    nav .nav-menu ul li {
+        width: 100%;
+    }
 
-  /* زر Sign In داخل الهامبرغر */
-  .signup-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-  }
+    nav .nav-menu .nav-link {
+        width: 100%;
+        font-size: 1.1rem;
+    }
 
-  /* الهامبرغر */
-  .hamburger {
-    display: flex;
-    z-index: 10001;
-  }
+    /* زر Sign In داخل الهامبرغر */
+    .signup-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
 
-  /* الخلفية الغامقة */
-  .overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(3px);
-    z-index: 9999;
-  }
+    /* الهامبرغر */
+    .hamburger {
+        display: flex;
+        z-index: 10001;
+    }
+
+    /* الخلفية الغامقة */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(3px);
+        z-index: 9999;
+    }
 }
